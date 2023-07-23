@@ -1,0 +1,56 @@
+﻿@using EmployeeManagement.ViewModels
+@model EmployeeCreateViewModel;
+@inject IEmployeeRepository _empRepository ;
+@{
+    ViewData["Title"] = "Create Emoloyee";
+}
+
+<div class="row">  
+    <div class="col-md-9">  
+        <form enctype="multipart/form-data" asp-controller="Home" asp-action="Create" method="post">  
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>  
+              
+            <div class="form-group">  
+                <label asp-for="Name" class="control-label"></label>  
+                <input asp-for="Name" class="form-control" />  
+                <span asp-validation-for="Name" class="text-danger"></span>  
+            </div>  
+            <div class="form-group">  
+                <label asp-for="Email" class="control-label"></label>  
+                <input asp-for="Email" class="form-control" type="Email"/>  
+                <span asp-validation-for="Email" class="text-danger"></span>  
+            </div>  
+                <div class="form-group row">  
+                <label asp-for="Department" class="control-label"></label>  
+              <div class="col-sm-10">
+           <select asp-for="Department" asp-items="Html.GetEnumSelectList<Dept>()" class="custom-select mr-sm-2" >
+             
+              <option value="">Please Select</option>
+            </select>
+              </div>
+
+                 <div class="form-group row">  
+                <label asp-for="Photos" class="col-sm-2 col-form-label"></label> 
+                <div class="col-sm-10">
+             <div class="custom-file">
+                <input multiple asp-for="Photos" class="form-control custom-file-input" />  
+                <label   class="  custom-file-label">Choos File....</label> 
+            
+             </div>
+                </div> 
+               
+            </div>  
+            
+               <span asp-validation-for="Department" class="text-danger"></span>  
+
+            </div>  
+            <div class="form-group">  
+                        <input type="submit" value="Save User Details" class="btn btn-primary" />  
+            </div> 
+              <div class="form-group">  
+                  Totla Employee Count     @_empRepository.GetAllEmployees().Count();
+            </div>   
+            <b>@ViewBag.message</b>  
+                </form>  
+            </div>  
+        </div>  

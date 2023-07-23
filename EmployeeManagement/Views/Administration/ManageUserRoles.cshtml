@@ -1,0 +1,39 @@
+@model List<UserRolesViewModel>
+@{
+    ViewData["Title"] = "ManageUserRoles";
+    var userId=  ViewBag.userId;
+}
+
+<form   asp-controller="Administration" asp-action="ManageUserRoles"  method="post">
+    <div class="card">
+        <div class="card-header">
+     <input type="hidden"  id="userId" name="userId" class="form-control" value=@userId >
+        </div>
+        <div class="card-body">
+          @for (int i = 0; i < Model.Count; i++)
+          {
+              <div class="form-check m-1">
+                 
+                  <input type="hidden" asp-for="@Model[i].RoleId" class="form-check-input">
+                  <input  type="hidden" asp-for="@Model[i].RoleName" class="form-check-input">
+                
+                  <input asp-for="@Model[i].IsSelected" class="form-check-input">
+                  <label class="form-check-label" asp-for="@Model[i].IsSelected">
+                    @Model[i].RoleName
+                  </label>
+              </div>
+          }
+        </div>
+        <div class="card- footer">
+           
+     
+        </div>
+           
+    </div>
+    <div class="form-group " style="margin-top: 30px;" >  
+                        <input type="submit" value="Update" class="btn btn-primary" />  
+                        <a asp-controller="Administration" asp-action="EditUser" 
+                         class="btn btn-danger ">Cancel</a>
+
+            </div> 
+</form>

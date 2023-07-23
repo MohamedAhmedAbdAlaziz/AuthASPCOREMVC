@@ -1,0 +1,12 @@
+E:\Kudvanent\employeeManage\Core\bin\Debug\net7.0\Core.deps.json
+E:\Kudvanent\employeeManage\Core\bin\Debug\net7.0\Core.dll
+E:\Kudvanent\employeeManage\Core\bin\Debug\net7.0\Core.pdb
+E:\Kudvanent\employeeManage\Core\obj\Debug\net7.0\Core.csproj.AssemblyReference.cache
+E:\Kudvanent\employeeManage\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Kudvanent\employeeManage\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+E:\Kudvanent\employeeManage\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+E:\Kudvanent\employeeManage\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+E:\Kudvanent\employeeManage\Core\obj\Debug\net7.0\Core.dll
+E:\Kudvanent\employeeManage\Core\obj\Debug\net7.0\refint\Core.dll
+E:\Kudvanent\employeeManage\Core\obj\Debug\net7.0\Core.pdb
+E:\Kudvanent\employeeManage\Core\obj\Debug\net7.0\ref\Core.dll

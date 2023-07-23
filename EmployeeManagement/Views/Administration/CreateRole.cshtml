@@ -1,0 +1,23 @@
+@using EmployeeManagement.ViewModels
+@model  CreateRoleModel
+@{
+    ViewData["Title"] = "Register";
+}
+<div class="row">
+    <div class="col-md-12">
+        <form   asp-controller="Administration" asp-action="CreateRole" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            
+            <div class="form-group">  
+                <label asp-for="RoleName" class="control-label"></label>  
+                <input asp-for="RoleName" class="form-control" type="text"/>  
+                <span asp-validation-for="RoleName" class="text-danger"></span>  
+            </div>  
+            
+            <div class="form-group " style="margin-top: 30px;" >  
+                        <input type="submit" value="Create User" class="btn btn-primary" />  
+            </div> 
+
+        </form>
+    </div>
+</div>

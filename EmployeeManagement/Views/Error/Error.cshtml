@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Error";
+}
+
+@if(ViewBag.ErrorTitle ==null){
+ <h3>
+    an error occured 
+ </h3>
+}
+else{
+    <h1 clsss="text-danger"> @ViewBag.ErrorTitle</h1>
+    <h1 clsss="text-danger"> @ViewBag.ErrorMessage</h1>
+
+}
